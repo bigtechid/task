@@ -13,3 +13,10 @@ yarn.lock
 
 # Chart dependencies
 **/charts/*.tgz
+
+# local deploy secrets
+planka.env
+deploy/planka.env
+*.env
+!.env.example
+!deploy/planka.env.example

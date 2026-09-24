@@ -1,0 +1,37 @@
+name: planka
+
+services:
+  planka:
+    image: ghcr.io/plankanban/planka:2.2.1
+    container_name: planka
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+        reservations:
+          memory: 256M
+    env_file:
+      - planka.env
+    command: ["/bin/sh", "/whitelabel-and-start.sh"]
+    volumes:
+      - planka_data:/app/data
+      - ./scripts/whitelabel-and-start.sh:/whitelabel-and-start.sh:ro
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.planka.rule=Host(`task.bigtech.id`)"
+      - "traefik.http.routers.planka.entrypoints=websecure"
+      - "traefik.http.routers.planka.tls=true"
+      - "traefik.http.routers.planka.tls.certresolver=letsencrypt"
+      - "traefik.http.services.planka.loadbalancer.server.port=1337"
+      - "traefik.docker.network=traefik"
+
+volumes:
+  planka_data:
+
+networks:
+  traefik:
+    external: true
