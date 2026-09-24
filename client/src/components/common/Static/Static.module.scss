@@ -37,15 +37,15 @@
 
   .wrapper {
     height: 100%;
-    margin-top: calc(116px + var(--promo-banner-height, 0px));
+    margin-top: calc(116px);
   }
 
   .wrapperBoard {
-    margin-top: calc(174px + var(--promo-banner-height, 0px));
+    margin-top: calc(174px);
   }
 
   .wrapperBoardWithFavorites {
-    margin-top: calc(264px + var(--promo-banner-height, 0px));
+    margin-top: calc(264px);
   }
 
   .wrapperFlex {
@@ -57,11 +57,11 @@
   }
 
   .wrapperProject {
-    margin-top: calc(98px + var(--promo-banner-height, 0px));
+    margin-top: calc(98px);
   }
 
   .wrapperProjectWithFavorites {
-    margin-top: calc(188px + var(--promo-banner-height, 0px));
+    margin-top: calc(188px);
   }
 
   .wrapperTransitioning {
@@ -73,6 +73,6 @@
   }
 
   .wrapperWithFavorites {
-    margin-top: calc(206px + var(--promo-banner-height, 0px));
+    margin-top: calc(206px);
   }
 }

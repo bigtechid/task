@@ -14,7 +14,7 @@ export default {
       or: 'Eller',
       pageNotFound_title: 'Sidan kunde inte hittas',
       password: 'Lösenord',
-      poweredByPlanka: 'Drivs av <1>PLANKA</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Server connection failed',
       unknownError: 'Okänt fel, försök igen senare',
       usernameAlreadyInUse: 'Användarnamnet används redan',

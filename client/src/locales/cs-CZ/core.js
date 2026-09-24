@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'O aplikaci',
-      aboutPlanka_title: 'O PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'Přístupový token',
       account: 'Účet',
       actions: 'Akce',
@@ -138,14 +138,7 @@ export default {
       customFieldGroups_title: 'Skupina vlastních polí',
       customField_title: 'Vlastní pole',
       customFields_title: 'Vlastní pole',
-      discoverPlankaPro: '✨ Více funkcí pro vaše tabule: Objevte PLANKA Pro',
-      discoverPlankaPro_title: 'Objevte PLANKA Pro',
-      upgradeTeamToPro_title: 'Upgradovat tým na Pro',
-      proFeatureCalendar: '✨ Zobrazení kalendáře pro vaše tabule',
-      proFeatureRecurringCards: '✨ Opakující se karty a automatizace',
-      proFeatureGuestRoles: '✨ Role hosta a externí spolupráce',
-      dismissProBannerFor30Days: 'Zavřít na 30 dní',
-      customerPanel_title: 'Panel zákazníka',
+
       dangerZone_title: 'Nebezpečná zóna',
       date: 'Datum',
       deactivateUser_title: 'Deaktivace uživatele',
@@ -269,7 +262,7 @@ export default {
       passwordIsSet: 'Heslo je nastaveno',
       phone: 'Telefon',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA používá <1><0>Apprise</0></1> k zasílání oznámení do více než 100 oblíbených služeb.',
+        'bigtech používá <1><0>Apprise</0></1> k zasílání oznámení do více než 100 oblíbených služeb.',
       port: 'Port',
       preferences: 'Volby',
       pressPasteShortcutToAddAttachmentFromClipboard:

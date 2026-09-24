@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'حول التطبيق',
-      aboutPlanka_title: 'حول PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'رمز الوصول',
       account: 'الحساب',
       actions: 'إجراءات',
@@ -136,14 +136,7 @@ export default {
       customFieldGroups_title: 'مجموعات الحقول المخصصة',
       customField_title: 'الحقل المخصص',
       customFields_title: 'الحقول المخصصة',
-      discoverPlankaPro: '✨ المزيد من الميزات لألواحك: اكتشف PLANKA Pro',
-      discoverPlankaPro_title: 'اكتشف PLANKA Pro',
-      upgradeTeamToPro_title: 'ترقية الفريق إلى Pro',
-      proFeatureCalendar: '✨ عرض التقويم للوحاتك',
-      proFeatureRecurringCards: '✨ البطاقات المتكررة والأتمتة',
-      proFeatureGuestRoles: '✨ أدوار الضيف والتعاون الخارجي',
-      dismissProBannerFor30Days: 'إغلاق لمدة 30 يومًا',
-      customerPanel_title: 'لوحة العملاء',
+
       dangerZone_title: 'منطقة الخطر',
       date: 'تاريخ',
       deactivateUser_title: 'إلغاء تفعيل المستخدم',

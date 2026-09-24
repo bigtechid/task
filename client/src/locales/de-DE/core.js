@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'Über die App',
-      aboutPlanka_title: 'Über PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'Zugriffstoken',
       account: 'Konto',
       actions: 'Aktionen',
@@ -168,14 +168,12 @@ export default {
       customFieldGroups_title: 'Benutzerdefinierte Feldgruppen',
       customField_title: 'Feldgruppe',
       customFields_title: 'Feldgruppen',
-      customerPanel_title: 'Kundenpanel',
+
       dangerZone_title: 'Gefahrenbereich',
       disable2fa_title: 'Zwei-Faktor-Authentifizierung deaktivieren',
       disable2faWarning:
         'Sie müssen Ihr aktuelles Passwort und einen TOTP-Code bestätigen. Bestehende Sitzungen bleiben angemeldet.',
-      discoverPlankaPro: '✨ Mehr Features für eure Boards: PLANKA Pro entdecken',
-      discoverPlankaPro_title: 'PLANKA Pro entdecken',
-      dismissProBannerFor30Days: 'Für 30 Tage schließen',
+
       enable2fa_title: 'Zwei-Faktor-Authentifizierung aktivieren',
       enabledOn: 'Aktiviert am {{date}}',
       enterCodeFromApp: 'Geben Sie den 6-stelligen Code aus Ihrer Authenticator-App ein.',
@@ -216,10 +214,7 @@ export default {
         'Fügen Sie Ihrem Konto eine zusätzliche Sicherheitsebene hinzu, indem Sie einen zeitbasierten Einmalcode aus einer Authenticator-App verwenden.',
       twoFactorAuthentication: 'Zwei-Faktor-Authentifizierung',
       unknownDevice: 'Unbekanntes Gerät',
-      upgradeTeamToPro_title: 'Team auf Pro upgraden',
-      proFeatureCalendar: '✨ Kalenderansicht für eure Boards',
-      proFeatureRecurringCards: '✨ Wiederkehrende Karten',
-      proFeatureGuestRoles: '✨ Gastrollen & externe Zusammenarbeit',
+
       date: 'Datum',
       deactivateUser_title: 'Benutzer deaktivieren',
       defaultCardType_title: 'Standard-Kartentyp',
@@ -342,7 +337,7 @@ export default {
       passwordIsSet: 'Passwort ist gesetzt',
       phone: 'Telefon',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA verwendet <1><0>Apprise</0></1>, um Benachrichtigungen an über 100 beliebte Dienste zu senden.',
+        'bigtech verwendet <1><0>Apprise</0></1>, um Benachrichtigungen an über 100 beliebte Dienste zu senden.',
       port: 'Port',
       preferences: 'Voreinstellungen',
       pressPasteShortcutToAddAttachmentFromClipboard:

@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: '앱 소개',
-      aboutPlanka_title: 'PLANKA 소개',
+      aboutPlanka_title: 'About bigtech',
       accessToken: '액세스 토큰',
       account: '계정',
       actions: '작업',
@@ -134,14 +134,7 @@ export default {
       customFieldGroups_title: '사용자 정의 필드 그룹들',
       customField_title: '사용자 정의 필드',
       customFields_title: '사용자 정의 필드들',
-      discoverPlankaPro: '✨ 보드를 위한 더 많은 기능: PLANKA Pro 알아보기',
-      discoverPlankaPro_title: 'PLANKA Pro 알아보기',
-      upgradeTeamToPro_title: '팀을 Pro로 업그레이드',
-      proFeatureCalendar: '✨ 보드용 캘린더 뷰',
-      proFeatureRecurringCards: '✨ 반복 카드 및 자동화',
-      proFeatureGuestRoles: '✨ 게스트 역할 및 외부 협업',
-      dismissProBannerFor30Days: '30일 동안 닫기',
-      customerPanel_title: '고객 패널',
+
       dangerZone_title: '위험 구역',
       date: '날짜',
       deactivateUser_title: '사용자 비활성화',
@@ -264,7 +257,7 @@ export default {
       passwordIsSet: '비밀번호가 설정됨',
       phone: '전화',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA는 <1><0>Apprise</0></1>를 사용하여 100개 이상의 인기 서비스에 알림을 보냅니다.',
+        'bigtech는 <1><0>Apprise</0></1>를 사용하여 100개 이상의 인기 서비스에 알림을 보냅니다.',
       port: '포트',
       preferences: '환경 설정',
       pressPasteShortcutToAddAttachmentFromClipboard:

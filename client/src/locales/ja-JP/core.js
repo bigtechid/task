@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'アプリについて',
-      aboutPlanka_title: 'PLANKAについて',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'アクセストークン',
       account: 'アカウント',
       actions: 'アクション',
@@ -139,14 +139,7 @@ export default {
       customFieldGroups_title: 'カスタムフィールドグループ',
       customField_title: 'カスタムフィールド',
       customFields_title: 'カスタムフィールド',
-      discoverPlankaPro: '✨ ボードのさらなる機能: PLANKA Proを発見',
-      discoverPlankaPro_title: 'PLANKA Proを発見',
-      upgradeTeamToPro_title: 'チームをProにアップグレード',
-      proFeatureCalendar: '✨ ボード用カレンダービュー',
-      proFeatureRecurringCards: '✨ 繰り返しカードと自動化',
-      proFeatureGuestRoles: '✨ ゲストロールと外部コラボレーション',
-      dismissProBannerFor30Days: '30日間閉じる',
-      customerPanel_title: '顧客パネル',
+
       dangerZone_title: '危険ゾーン',
       date: '日付',
       deactivateUser_title: 'ユーザーを非アクティブにする',
@@ -270,7 +263,7 @@ export default {
       passwordIsSet: 'パスワードが設定されています',
       phone: '電話番号',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKAは<1><0>Apprise</0></1>を使用して100以上の人気サービスに通知を送信します。',
+        'bigtechは<1><0>Apprise</0></1>を使用して100以上の人気サービスに通知を送信します。',
       port: 'ポート',
       preferences: '環境設定',
       pressPasteShortcutToAddAttachmentFromClipboard:

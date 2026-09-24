@@ -23,6 +23,6 @@ module.exports = {
   },
 
   fn(inputs) {
-    return authenticator.keyuri(inputs.account, inputs.issuer || 'Planka', inputs.secret);
+    return authenticator.keyuri(inputs.account, inputs.issuer || 'bigtech', inputs.secret);
   },
 };

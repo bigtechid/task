@@ -14,7 +14,7 @@ export default {
       or: 'Alebo',
       pageNotFound_title: 'Stránka neexistuje',
       password: 'Heslo',
-      poweredByPlanka: 'Poháňané <1>PLANKA</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Pripojenie k serveru zlyhalo',
       unknownError: 'Neznáma chyba, skúste to neskôr',
       usernameAlreadyInUse: 'Používateľské meno je zabrané',

@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'Về ứng dụng',
-      aboutPlanka_title: 'Về PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'Access token',
       account: 'Tài khoản',
       actions: 'Thao tác',
@@ -143,14 +143,7 @@ export default {
       customFieldGroups_title: 'Các nhóm trường tùy chỉnh',
       customField_title: 'Trường tùy chỉnh',
       customFields_title: 'Các trường tùy chỉnh',
-      discoverPlankaPro: '✨ Nhiều tính năng hơn cho bảng của bạn: Khám phá PLANKA Pro',
-      discoverPlankaPro_title: 'Khám phá PLANKA Pro',
-      upgradeTeamToPro_title: 'Nâng cấp nhóm lên Pro',
-      proFeatureCalendar: '✨ Chế độ xem lịch cho bảng của bạn',
-      proFeatureRecurringCards: '✨ Thẻ định kỳ và tự động hóa',
-      proFeatureGuestRoles: '✨ Vai trò khách và cộng tác bên ngoài',
-      dismissProBannerFor30Days: 'Đóng trong 30 ngày',
-      customerPanel_title: 'Bảng điều khiển khách hàng',
+
       dangerZone_title: 'Khu vực nguy hiểm',
       date: 'Ngày',
       deactivateUser_title: 'Hủy kích hoạt người dùng',
@@ -273,7 +266,7 @@ export default {
       passwordIsSet: 'Mật khẩu đã được thiết lập',
       phone: 'Điện thoại',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA sử dụng <1><0>Apprise</0></1> để gửi thông báo tới hơn 100 dịch vụ phổ biến.',
+        'bigtech sử dụng <1><0>Apprise</0></1> để gửi thông báo tới hơn 100 dịch vụ phổ biến.',
       port: 'Cổng',
       preferences: 'Tùy chọn',
       pressPasteShortcutToAddAttachmentFromClipboard:

@@ -13,7 +13,7 @@ export default {
       or: 'Veya',
       pageNotFound_title: 'Sayfa bulunamadı',
       password: 'Şifre',
-      poweredByPlanka: 'PLANKA tarafından desteklenmektedir',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Sunucu bağlantı hatası',
       unknownError: 'Bilinmeyen hata, daha sonra tekrar deneyin',
       usernameAlreadyInUse: 'Kullanıcı adı zaten kullanımda',

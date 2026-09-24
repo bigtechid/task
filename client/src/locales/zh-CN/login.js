@@ -13,7 +13,7 @@ export default {
       or: '或',
       pageNotFound_title: '找不到页面',
       password: '密码',
-      poweredByPlanka: '技术支持由<1>PLANKA</1>提供',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: '服务器连接失败',
       unknownError: '未知错误，请稍后重试',
       usernameAlreadyInUse: '用户名已被占用',

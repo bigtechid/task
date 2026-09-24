@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: "Quant a l'aplicació",
-      aboutPlanka_title: 'Quant a PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: "Token d'accés",
       account: 'Compte',
       actions: 'Accions',
@@ -146,14 +146,7 @@ export default {
       customFieldGroups_title: 'Grups de camps personalitzats',
       customField_title: 'Camp personalitzat',
       customFields_title: 'Camps personalitzats',
-      discoverPlankaPro: '✨ Més funcions per als vostres taulers: Descobriu PLANKA Pro',
-      discoverPlankaPro_title: 'Descobriu PLANKA Pro',
-      upgradeTeamToPro_title: "Actualitzeu l'equip a Pro",
-      proFeatureCalendar: '✨ Vista de calendari per als vostres taulers',
-      proFeatureRecurringCards: '✨ Targetes recurrents i automatització',
-      proFeatureGuestRoles: '✨ Rols de convidat i col·laboració externa',
-      dismissProBannerFor30Days: 'Tanca durant 30 dies',
-      customerPanel_title: 'Panell del client',
+
       dangerZone_title: 'Zona de perill',
       date: 'Data',
       deactivateUser_title: 'Desactivar usuari',
@@ -277,7 +270,7 @@ export default {
       passwordIsSet: 'La contrasenya està establerta',
       phone: 'Telèfon',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA utilitza <1><0>Apprise</0></1> per enviar notificacions a més de 100 serveis populars.',
+        'bigtech utilitza <1><0>Apprise</0></1> per enviar notificacions a més de 100 serveis populars.',
       port: 'Port',
       preferences: 'Preferències',
       pressPasteShortcutToAddAttachmentFromClipboard:

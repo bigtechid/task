@@ -14,7 +14,7 @@ export default {
       or: 'Vagy',
       pageNotFound_title: 'Az oldal nem található',
       password: 'Jelszó',
-      poweredByPlanka: 'Működteti a <1>PLANKA</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'A szerverkapcsolat sikertelen',
       unknownError: 'Ismeretlen hiba, próbáld meg később újra',
       usernameAlreadyInUse: 'A felhasználónév már használatban van',

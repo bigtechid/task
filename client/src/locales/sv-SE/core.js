@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'Om appen',
-      aboutPlanka_title: 'Om PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'Åtkomsttoken',
       account: 'Konto',
       actions: 'Åtgärder',
@@ -147,14 +147,7 @@ export default {
       customFieldGroups_title: 'Anpassade fältgrupper',
       customField_title: 'Anpassat fält',
       customFields_title: 'Anpassade fält',
-      discoverPlankaPro: '✨ Fler funktioner för dina bräden: Upptäck PLANKA Pro',
-      discoverPlankaPro_title: 'Upptäck PLANKA Pro',
-      upgradeTeamToPro_title: 'Uppgradera teamet till Pro',
-      proFeatureCalendar: '✨ Kalendervy för dina bräden',
-      proFeatureRecurringCards: '✨ Återkommande kort och automatisering',
-      proFeatureGuestRoles: '✨ Gästroller och externt samarbete',
-      dismissProBannerFor30Days: 'Stäng i 30 dagar',
-      customerPanel_title: 'Kundpanel',
+
       dangerZone_title: 'Farozon',
       date: 'Datum',
       deactivateUser_title: 'Inaktivera användare',
@@ -278,7 +271,7 @@ export default {
       passwordIsSet: 'Lösenord är inställt',
       phone: 'Telefon',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA använder <1><0>Apprise</0></1> för att skicka aviseringar till över 100 populära tjänster.',
+        'bigtech använder <1><0>Apprise</0></1> för att skicka aviseringar till över 100 populära tjänster.',
       port: 'Port',
       preferences: 'Preferenser',
       pressPasteShortcutToAddAttachmentFromClipboard:

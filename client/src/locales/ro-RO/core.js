@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'Despre aplicație',
-      aboutPlanka_title: 'Despre PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'Token de acces',
       account: 'Cont',
       actions: 'Acțiuni',
@@ -140,14 +140,7 @@ export default {
       customFieldGroups_title: 'Grupuri de câmpuri personalizate',
       customField_title: 'Câmp personalizat',
       customFields_title: 'Câmpuri personalizate',
-      discoverPlankaPro: '✨ Mai multe funcții pentru panourile tale: Descoperă PLANKA Pro',
-      discoverPlankaPro_title: 'Descoperă PLANKA Pro',
-      upgradeTeamToPro_title: 'Actualizează echipa la Pro',
-      proFeatureCalendar: '✨ Vizualizare calendar pentru panourile tale',
-      proFeatureRecurringCards: '✨ Carduri recurente și automatizare',
-      proFeatureGuestRoles: '✨ Roluri invitat și colaborare externă',
-      dismissProBannerFor30Days: 'Închide pentru 30 de zile',
-      customerPanel_title: 'Panoul clientului',
+
       dangerZone_title: 'Zona periculoasă',
       date: 'Data',
       deactivateUser_title: 'Dezactivează utilizatorul',
@@ -271,7 +264,7 @@ export default {
       passwordIsSet: 'Parola este setată',
       phone: 'Telefon',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA folosește <1><0>Apprise</0></1> pentru a trimite notificări către peste 100 de servicii populare.',
+        'bigtech folosește <1><0>Apprise</0></1> pentru a trimite notificări către peste 100 de servicii populare.',
       port: 'Port',
       preferences: 'Preferințe',
       pressPasteShortcutToAddAttachmentFromClipboard:

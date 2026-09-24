@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'Σχετικά με την εφαρμογή',
-      aboutPlanka_title: 'Σχετικά με το PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'Διακριτικό πρόσβασης',
       account: 'Λογαριασμός',
       actions: 'Ενέργειες',
@@ -155,15 +155,7 @@ export default {
       customFieldGroups_title: 'Ομάδες προσαρμοσμένων πεδίων',
       customField_title: 'Προσαρμοσμένο πεδίο',
       customFields_title: 'Προσαρμοσμένα πεδία',
-      discoverPlankaPro:
-        '✨ Περισσότερες λειτουργίες για τους πίνακές σας: Ανακαλύψτε το PLANKA Pro',
-      discoverPlankaPro_title: 'Ανακαλύψτε το PLANKA Pro',
-      upgradeTeamToPro_title: 'Αναβαθμίστε την ομάδα σε Pro',
-      proFeatureCalendar: '✨ Προβολή ημερολογίου για τους πίνακές σας',
-      proFeatureRecurringCards: '✨ Επαναλαμβανόμενες κάρτες και αυτοματισμός',
-      proFeatureGuestRoles: '✨ Ρόλοι επισκεπτών και εξωτερική συνεργασία',
-      dismissProBannerFor30Days: 'Κλείσιμο για 30 ημέρες',
-      customerPanel_title: 'Πίνακας πελάτη',
+
       dangerZone_title: 'Επικίνδυνη ζώνη',
       date: 'Ημερομηνία',
       deactivateUser_title: 'Απενεργοποίηση χρήστη',
@@ -287,7 +279,7 @@ export default {
       passwordIsSet: 'Ο κωδικός πρόσβασης έχει οριστεί',
       phone: 'Τηλέφωνο',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'Το PLANKA χρησιμοποιεί το <1><0>Apprise</0></1> για να στέλνει ειδοποιήσεις σε πάνω από 100 δημοφιλείς υπηρεσίες.',
+        'Το bigtech χρησιμοποιεί το <1><0>Apprise</0></1> για να στέλνει ειδοποιήσεις σε πάνω από 100 δημοφιλείς υπηρεσίες.',
       port: 'Θύρα',
       preferences: 'Προτιμήσεις',
       pressPasteShortcutToAddAttachmentFromClipboard:

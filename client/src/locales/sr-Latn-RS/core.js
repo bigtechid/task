@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'O aplikaciji',
-      aboutPlanka_title: 'O PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'Token za pristup',
       account: 'Nalog',
       actions: 'Radnje',
@@ -141,14 +141,7 @@ export default {
       customFieldGroups_title: 'Grupe prilagođenih polja',
       customField_title: 'Prilagođeno polje',
       customFields_title: 'Prilagođena polja',
-      discoverPlankaPro: '✨ Više funkcija za vaše table: Otkrijte PLANKA Pro',
-      discoverPlankaPro_title: 'Otkrijte PLANKA Pro',
-      upgradeTeamToPro_title: 'Nadogradite tim na Pro',
-      proFeatureCalendar: '✨ Prikaz kalendara za vaše table',
-      proFeatureRecurringCards: '✨ Ponavljajuće kartice i automatizacija',
-      proFeatureGuestRoles: '✨ Gostujuće uloge i spoljna saradnja',
-      dismissProBannerFor30Days: 'Zatvori na 30 dana',
-      customerPanel_title: 'Panel kupca',
+
       dangerZone_title: 'Opasna zona',
       date: 'Datum',
       deactivateUser_title: 'Deaktiviraj korisnika',
@@ -272,7 +265,7 @@ export default {
       passwordIsSet: 'Lozinka je podešena',
       phone: 'Telefon',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA koristi <1><0>Apprise</0></1> za slanje obaveštenja na preko 100 popularnih servisa.',
+        'bigtech koristi <1><0>Apprise</0></1> za slanje obaveštenja na preko 100 popularnih servisa.',
       port: 'Port',
       preferences: 'Svojstva',
       pressPasteShortcutToAddAttachmentFromClipboard:

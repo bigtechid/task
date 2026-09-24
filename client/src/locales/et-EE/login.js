@@ -14,7 +14,7 @@ export default {
       or: 'Või',
       pageNotFound_title: 'Lehte ei leitud',
       password: 'Parool',
-      poweredByPlanka: 'Töötab <1>PLANKA</1> platvormil',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Serveriühendus ebaõnnestus',
       unknownError: 'Tundmatu viga, proovi hiljem uuesti',
       usernameAlreadyInUse: 'Kasutajanimi on juba kasutusel',

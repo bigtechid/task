@@ -13,7 +13,7 @@ export default {
       or: 'Or',
       pageNotFound_title: 'Page Not Found',
       password: 'Password',
-      poweredByPlanka: 'Powered by <1>PLANKA</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Server connection failed',
       unknownError: 'Unknown error, try again later',
       usernameAlreadyInUse: 'Username already in use',

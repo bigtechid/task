@@ -16,7 +16,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'About the App',
-      aboutPlanka_title: 'About PLANKA',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'Access token',
       account: 'Account',
       actions: 'Actions',
@@ -147,14 +147,12 @@ export default {
       customFieldGroups_title: 'Custom Field Groups',
       customField_title: 'Custom Field',
       customFields_title: 'Custom Fields',
-      customerPanel_title: 'Customer Panel',
+
       dangerZone_title: 'Danger Zone',
       disable2fa_title: 'Disable Two-Factor Authentication',
       disable2faWarning:
         'You will need to confirm your current password and a TOTP code. Existing sessions stay signed in.',
-      discoverPlankaPro: '✨ More features for your boards: Discover PLANKA Pro',
-      discoverPlankaPro_title: 'Discover PLANKA Pro',
-      dismissProBannerFor30Days: 'Dismiss for 30 days',
+
       enable2fa_title: 'Enable Two-Factor Authentication',
       enabledOn: 'Enabled on {{date}}',
       enterCodeFromApp: 'Enter the 6-digit code from your authenticator app.',
@@ -194,10 +192,7 @@ export default {
         'Add an extra layer of security to your account using a time-based one-time code from an authenticator app.',
       twoFactorAuthentication: 'Two-Factor Authentication',
       unknownDevice: 'Unknown device',
-      upgradeTeamToPro_title: 'Upgrade Team to Pro',
-      proFeatureCalendar: '✨ Calendar View for your boards',
-      proFeatureRecurringCards: '✨ Recurring Cards',
-      proFeatureGuestRoles: '✨ Guest Roles & External Collaboration',
+
       date: 'Date',
       deactivateUser_title: 'Deactivate User',
       defaultCardType_title: 'Default Card Type',
@@ -320,7 +315,7 @@ export default {
       passwordIsSet: 'Password is set',
       phone: 'Phone',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA uses <1><0>Apprise</0></1> to send notifications to over 100 popular services.',
+        'bigtech uses <1><0>Apprise</0></1> to send notifications to over 100 popular services.',
       port: 'Port',
       preferences: 'Preferences',
       pressPasteShortcutToAddAttachmentFromClipboard:

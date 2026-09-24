@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Divider, Header, Image, Loader, Tab } from 'semantic-ui-react';
 
-import version from '../../../version';
 import Markdown from '../Markdown';
 
 import aboutLogo from '../../../assets/images/about-logo.png';
@@ -37,10 +36,10 @@ const AboutPane = React.memo(() => {
 
   return (
     <Tab.Pane attached={false} className={styles.wrapper}>
-      <a href="https://github.com/plankanban/planka" target="_blank" rel="noreferrer">
+      <a href="https://bigtech.id" target="_blank" rel="noreferrer">
         <Image centered src={aboutLogo} size="large" />
       </a>
-      <div className={styles.version}>Community v{version}</div>
+      <div className={styles.version}>bigtech Task</div>
       <Divider horizontal>
         <Header as="h4">
           {t('common.whatsNew', {

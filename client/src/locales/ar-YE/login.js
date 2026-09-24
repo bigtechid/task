@@ -13,7 +13,7 @@ export default {
       or: 'أو',
       pageNotFound_title: 'الصفحة غير موجودة',
       password: 'كلمة المرور',
-      poweredByPlanka: 'مدعوم بواسطة <1>PLANKA</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'فشل الاتصال بالخادم',
       unknownError: 'خطأ غير معروف، يرجى المحاولة لاحقاً',
       usernameAlreadyInUse: 'اسم المستخدم تم استخدامه بالفعل',

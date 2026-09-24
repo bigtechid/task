@@ -14,7 +14,7 @@ export default {
       or: 'Atau',
       pageNotFound_title: 'Halaman tidak ditemukan',
       password: 'Kata sandi',
-      poweredByPlanka: 'Didukung oleh <1>PLANKA</1>',
+      poweredByPlanka: 'oleh <1>bigtech</1>',
       serverConnectionFailed: 'Koneksi server gagal',
       unknownError: 'Kesalahan tidak diketahui, coba lagi nanti.',
       usernameAlreadyInUse: 'Username telah digunakan',

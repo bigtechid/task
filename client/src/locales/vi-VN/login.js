@@ -13,7 +13,7 @@ export default {
       or: 'Hoặc',
       pageNotFound_title: 'Không tìm thấy trang',
       password: 'Mật khẩu',
-      poweredByPlanka: 'Được phát triển bởi <1>PLANKA</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Không kết nối được tới máy chủ',
       unknownError: 'Lỗi không xác định, thử lại sau',
       usernameAlreadyInUse: 'Tên đăng nhập đã được sử dụng',

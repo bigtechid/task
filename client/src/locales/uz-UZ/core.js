@@ -21,7 +21,7 @@ export default {
   translation: {
     common: {
       aboutApp_title: 'Ilova haqida',
-      aboutPlanka_title: 'PLANKA haqida',
+      aboutPlanka_title: 'About bigtech',
       accessToken: 'Kirish tokeni',
       account: 'Profil',
       actions: 'Amallar',
@@ -138,14 +138,7 @@ export default {
       customFieldGroups_title: 'Maxsus maydon guruhlari',
       customField_title: 'Maxsus maydon',
       customFields_title: 'Maxsus maydonlar',
-      discoverPlankaPro: "✨ Doskalaringiz uchun ko'proq imkoniyatlar: PLANKA Pro ni kashf eting",
-      discoverPlankaPro_title: 'PLANKA Pro ni kashf eting',
-      upgradeTeamToPro_title: 'Jamoani Pro ga yangilash',
-      proFeatureCalendar: "✨ Doskalaringiz uchun kalendar ko'rinishi",
-      proFeatureRecurringCards: '✨ Takrorlanuvchi kartalar va avtomatlashtirish',
-      proFeatureGuestRoles: '✨ Mehmon rollari va tashqi hamkorlik',
-      dismissProBannerFor30Days: '30 kunga yopish',
-      customerPanel_title: 'Mijoz paneli',
+
       dangerZone_title: 'Xavfli hudud',
       date: 'Sana',
       deactivateUser_title: 'Foydalanuvchini faolsizlantirish',
@@ -269,7 +262,7 @@ export default {
       passwordIsSet: "Parol o'rnatilgan",
       phone: 'Telefon',
       plankaUsesAppriseToSendNotificationsToOver100PopularServices:
-        'PLANKA 100 dan ortiq mashhur xizmatlarga bildirishnomalar yuborish uchun <1><0>Apprise</0></1> dan foydalanadi.',
+        'bigtech 100 dan ortiq mashhur xizmatlarga bildirishnomalar yuborish uchun <1><0>Apprise</0></1> dan foydalanadi.',
       port: 'Port',
       preferences: 'Afzalliklar',
       pressPasteShortcutToAddAttachmentFromClipboard:

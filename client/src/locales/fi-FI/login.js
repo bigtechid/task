@@ -14,7 +14,7 @@ export default {
       or: 'Tai',
       pageNotFound_title: 'Sivua ei löytynyt',
       password: 'Salasana',
-      poweredByPlanka: 'Käyttää <1>PLANKAa</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Yhteys palvelimeen epäonnistui',
       unknownError: 'Tuntematon virhe, yritä myöhemmin uudelleen',
       usernameAlreadyInUse: 'Käyttäjänimi on jo käytössä',

@@ -14,7 +14,7 @@ export default {
       or: 'Of',
       pageNotFound_title: 'Pagina niet gevonden',
       password: 'Wachtwoord',
-      poweredByPlanka: 'Mogelijk gemaakt door <1>PLANKA</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Verbinding met de server mislukt',
       unknownError: 'Onbekende fout, probeer het later opnieuw',
       usernameAlreadyInUse: 'Gebruikersnaam is al in gebruik',

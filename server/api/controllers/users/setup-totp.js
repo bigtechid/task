@@ -124,7 +124,7 @@ module.exports = {
     const provisioningUri = sails.helpers.utils.buildTotpUri.with({
       account: user.email,
       secret,
-      issuer: 'Planka',
+      issuer: 'bigtech',
     });
 
     // Only write the pending secret. Leave isTotpEnabled / totpEnabledAt /

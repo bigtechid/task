@@ -14,7 +14,7 @@ export default {
       or: 'Або',
       pageNotFound_title: 'Сторінку не знайдено',
       password: 'Пароль',
-      poweredByPlanka: 'Працює на <1>PLANKA</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Не вдалося підключитися до сервера',
       unknownError: 'Невідома помилка, спробуйте ще раз пізніше',
       usernameAlreadyInUse: "Ім'я користувача вже використовується",

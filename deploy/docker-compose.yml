@@ -2,7 +2,8 @@ name: planka
 
 services:
   planka:
-    image: ghcr.io/plankanban/planka:2.2.1
+    build: .
+    image: bigtechid/task:2.2.1
     container_name: planka
     restart: unless-stopped
     deploy:

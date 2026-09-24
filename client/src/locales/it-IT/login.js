@@ -14,7 +14,7 @@ export default {
       or: 'Oppure',
       pageNotFound_title: 'Pagina non trovata',
       password: 'Password',
-      poweredByPlanka: 'Powered by <1>PLANKA</1>',
+      poweredByPlanka: 'by <1>bigtech</1>',
       serverConnectionFailed: 'Connesione al server fallita',
       unknownError: 'Errore sconosciuto, prova ancora',
       usernameAlreadyInUse: 'Username già in uso',
