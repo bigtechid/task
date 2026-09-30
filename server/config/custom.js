@@ -85,10 +85,21 @@ module.exports.custom = {
 
   gravatarBaseUrl: process.env.GRAVATAR_BASE_URL,
 
+  oidcIssuer: process.env.OIDC_ISSUER,
+  oidcClientId: process.env.OIDC_CLIENT_ID,
+  oidcClientSecret: process.env.OIDC_CLIENT_SECRET,
+  oidcScopes: process.env.OIDC_SCOPES || 'openid email profile',
+  oidcRedirectUri: `${baseUrl.replace(/\/$/, '')}/login`,
+  oidcAllowedDomains: envToArray(process.env.OIDC_ALLOWED_DOMAINS).map((domain) =>
+    domain.trim().toLowerCase(),
+  ),
+  oidcButtonText: process.env.OIDC_BUTTON_TEXT,
+
   /* Internal */
 
   internalAccessToken: process.env.INTERNAL_ACCESS_TOKEN,
   termsType: process.env.TERMS_TYPE || 'custom',
+  termsDisabled: process.env.DISABLE_TERMS === 'true',
   customerPanelUrl: process.env.CUSTOMER_PANEL_URL,
   demoMode: process.env.DEMO_MODE === 'true',
 };

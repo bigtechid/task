@@ -64,9 +64,11 @@
   }
 
   .logoImage {
+    display: block;
     height: 28px;
-    max-width: 140px;
+    max-width: 160px;
     object-fit: contain;
+    width: auto;
   }
 
   .menu {

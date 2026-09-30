@@ -10,20 +10,13 @@ import actions from '../../../actions';
 import api from '../../../api';
 import i18n from '../../../i18n';
 import { setAccessToken } from '../../../utils/access-token-storage';
+import { consumeOidcCallback } from '../../../utils/oidc';
 import AccessTokenSteps from '../../../constants/AccessTokenSteps';
 
-export function* initializeLogin() {
-  const { item: bootstrap } = yield call(api.getBootstrap); // TODO: handle error
-
-  yield put(actions.initializeLogin(bootstrap));
-}
-
-export function* authenticate(data) {
-  yield put(actions.authenticate(data));
-
+function* requestAccessToken(method, data) {
   let accessToken;
   try {
-    ({ item: accessToken } = yield call(api.createAccessToken, data));
+    ({ item: accessToken } = yield call(method, data));
   } catch (error) {
     let terms;
     if (error.step === AccessTokenSteps.ACCEPT_TERMS) {
@@ -36,6 +29,32 @@ export function* authenticate(data) {
 
   yield call(setAccessToken, accessToken);
   yield put(actions.authenticate.success(accessToken));
+}
+
+export function* authenticate(data) {
+  yield put(actions.authenticate(data));
+  yield call(requestAccessToken, api.createAccessToken, data);
+}
+
+export function* initializeLogin() {
+  const { item: bootstrap } = yield call(api.getBootstrap); // TODO: handle error
+
+  yield put(actions.initializeLogin(bootstrap));
+
+  const oidcCallback = consumeOidcCallback();
+
+  if (!oidcCallback) {
+    return;
+  }
+
+  yield put(actions.authenticate({}));
+
+  if (oidcCallback.error) {
+    yield put(actions.authenticate.failure(oidcCallback.error));
+    return;
+  }
+
+  yield call(requestAccessToken, api.exchangeWithOidc, oidcCallback.data);
 }
 
 export function* clearAuthenticateError() {

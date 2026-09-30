@@ -14,6 +14,9 @@ module.exports = {
     user: {
       type: 'ref',
     },
+    oidcConfig: {
+      type: 'ref',
+    },
   },
 
   fn(inputs) {
@@ -21,6 +24,23 @@ module.exports = {
       termsLanguages: sails.hooks.terms.getLanguages(),
       version: sails.config.custom.version,
     };
+
+    if (inputs.oidcConfig) {
+      const authorizationUrl = new URL(inputs.oidcConfig.authorization_endpoint);
+
+      authorizationUrl.search = new URLSearchParams({
+        response_type: 'code',
+        client_id: sails.config.custom.oidcClientId,
+        redirect_uri: sails.config.custom.oidcRedirectUri,
+        scope: sails.config.custom.oidcScopes,
+        prompt: 'select_account',
+      });
+
+      data.oidc = {
+        authorizationUrl: authorizationUrl.href,
+        buttonText: sails.config.custom.oidcButtonText,
+      };
+    }
 
     if (inputs.user && inputs.user.role === User.Roles.ADMIN) {
       Object.assign(data, {

@@ -51,8 +51,15 @@ module.exports = {
 
     const internalConfig = await InternalConfig.qm.getOneMain();
 
+    let oidcConfig = null;
+    try {
+      oidcConfig = await sails.helpers.utils.getOidcConfig();
+    } catch (error) {
+      sails.log.warn(`OIDC discovery failed: ${error.message}`);
+    }
+
     return {
-      item: sails.helpers.bootstrap.presentOne(internalConfig, currentUser),
+      item: sails.helpers.bootstrap.presentOne(internalConfig, currentUser, oidcConfig),
     };
   },
 };

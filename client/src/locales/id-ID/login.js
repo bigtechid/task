@@ -5,6 +5,8 @@ export default {
       adminLoginRequiredToInitializeInstance:
         'Login admin diperlukan untuk menginisialisasi instance',
       emailAlreadyInUse: 'E-mail telah digunakan',
+      emailDomainNotAllowed: 'Domain e-mail ini tidak diizinkan',
+      emailNotVerified: 'E-mail belum terverifikasi oleh penyedia',
       emailOrUsername: 'E-mail atau username',
       invalidCredentials: 'Kredensial tidak valid',
       invalidEmailOrUsername: 'E-mail atau username salah',
@@ -16,8 +18,11 @@ export default {
       password: 'Kata sandi',
       poweredByPlanka: 'oleh <1>bigtech</1>',
       serverConnectionFailed: 'Koneksi server gagal',
+      ssoLoginCancelled: 'Login dibatalkan',
+      ssoLoginFailed: 'Login SSO gagal, silakan coba lagi',
       unknownError: 'Kesalahan tidak diketahui, coba lagi nanti.',
       usernameAlreadyInUse: 'Username telah digunakan',
+      userNotRegistered: 'Belum ada akun untuk e-mail ini. Minta admin untuk menambahkan kamu.',
       whoops_title: 'Ups!',
     },
 
@@ -27,6 +32,7 @@ export default {
       goBack: 'Kembali',
       goHome: 'Ke beranda',
       logIn: 'Masuk',
+      logInWithSso: 'Masuk dengan Google',
     },
   },
 };

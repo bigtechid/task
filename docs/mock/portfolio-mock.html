@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workload · mock · bigtech Task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #1b2332;
+        --navy-2: #243044;
+        --bg: #f7f8fa;
+        --ink: #1d2939;
+        --muted: #667085;
+        --line: #e4e7ec;
+        --red: #ec1d27;
+        --soft-red: #ffe4e6;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
+      .shell { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+      .side {
+        background: var(--navy);
+        color: #d0d5dd;
+        padding: 16px 12px;
+        font-size: 13px;
+      }
+      .side .logo {
+        display: flex; align-items: center; gap: 10px;
+        color: #fff; font-weight: 700; font-size: 15px;
+        padding: 8px 10px 18px;
+      }
+      .mark {
+        width: 22px; height: 22px; border-radius: 50%; background: var(--red);
+        box-shadow: inset -6px 0 0 -2px var(--navy);
+      }
+      .nav-label {
+        font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
+        color: #98a2b3; padding: 10px 10px 6px; font-weight: 600;
+      }
+      .nav a {
+        display: block; color: inherit; text-decoration: none;
+        padding: 8px 10px; border-radius: 8px; margin-bottom: 2px;
+      }
+      .nav a:hover, .nav a.active { background: rgba(255,255,255,.08); color: #fff; }
+      .main { display: flex; flex-direction: column; min-width: 0; }
+      .top {
+        background: var(--navy); color: #fff;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 10px 18px; gap: 12px;
+      }
+      .top-tabs { display: flex; gap: 14px; font-size: 13px; color: #c7cdd8; }
+      .top-tabs span.active { color: #fff; border-bottom: 2px solid #fff; padding-bottom: 8px; }
+      .badge {
+        font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+        background: rgba(236,29,39,.2); color: #ffb4b8; border: 1px solid rgba(236,29,39,.35);
+        padding: 4px 8px; border-radius: 999px;
+      }
+      .content { padding: 18px 20px 40px; }
+      h1 { margin: 0 0 4px; font-size: 22px; letter-spacing: -.02em; }
+      .sub { margin: 0 0 14px; color: var(--muted); font-size: 13px; max-width: 70ch; }
+      .note {
+        background: #fff8e8; border: 1px solid #f5e0a8; color: #7a5a10;
+        padding: 10px 12px; border-radius: 10px; font-size: 12.5px; margin-bottom: 16px;
+      }
+      .toolbar {
+        display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+        margin-bottom: 12px; font-size: 13px;
+      }
+      .toolbar select, .toolbar button {
+        font: inherit; border: 1px solid var(--line); background: #fff;
+        border-radius: 8px; padding: 7px 10px; cursor: pointer;
+      }
+      .panel {
+        background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: auto;
+      }
+      .grid {
+        min-width: 980px;
+        display: grid;
+        grid-template-columns: 180px 1fr;
+      }
+      .head-left, .row-left {
+        border-right: 1px solid var(--line); background: #fafbfc;
+        padding: 10px 12px; position: sticky; left: 0; z-index: 2;
+      }
+      .head-right, .row-right { padding: 0; }
+      .weeks {
+        display: grid; grid-template-columns: repeat(5, 1fr);
+        border-bottom: 1px solid var(--line); font-size: 11px; color: var(--muted);
+        font-weight: 600;
+      }
+      .weeks div { padding: 8px 6px; border-right: 1px solid var(--line); }
+      .days {
+        display: grid; grid-template-columns: repeat(35, 1fr);
+        font-size: 10px; color: #98a2b3; border-bottom: 1px solid var(--line);
+      }
+      .days span {
+        text-align: center; padding: 4px 0; border-right: 1px solid #f0f2f5;
+      }
+      .person {
+        display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600;
+        min-height: 74px;
+      }
+      .av {
+        width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+        color: #fff; font-size: 11px; font-weight: 700; background: #475467; flex: 0 0 auto;
+      }
+      .load {
+        display: grid; grid-template-columns: repeat(35, 1fr);
+        border-bottom: 1px dashed #eef1f5; font-size: 10px; color: var(--muted);
+      }
+      .load i {
+        font-style: normal; text-align: center; padding: 3px 0; border-right: 1px solid #f7f8fa;
+      }
+      .load i.hot { background: var(--soft-red); color: #b42318; font-weight: 700; border-radius: 3px; }
+      .bars {
+        position: relative; height: 42px; margin: 4px 0 8px;
+        background: repeating-linear-gradient(
+          90deg, transparent, transparent calc(100% / 35 - 1px), #f0f2f5 calc(100% / 35 - 1px), #f0f2f5 calc(100% / 35)
+        );
+      }
+      .bar {
+        position: absolute; top: 8px; height: 26px; border-radius: 6px;
+        color: #fff; font-size: 11px; font-weight: 600; line-height: 26px;
+        padding: 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        box-shadow: 0 1px 2px rgba(16,24,40,.12);
+      }
+      .c1 { background: #7a5af8; }
+      .c2 { background: #f79009; }
+      .c3 { background: #12b76a; }
+      .c4 { background: #2e90fa; }
+      .c5 { background: #ee46bc; }
+      .row { display: contents; }
+      .row > .row-left, .row > .row-right { border-bottom: 1px solid var(--line); }
+      .legend {
+        margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; font-size: 12px; color: var(--muted);
+      }
+      .legend b { color: var(--ink); }
+      @media (max-width: 860px) {
+        .shell { grid-template-columns: 1fr; }
+        .side { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="side">
+        <div class="logo"><span class="mark"></span> bigtech Task</div>
+        <div class="nav-label">Personal</div>
+        <div class="nav">
+          <a href="#">My to-do</a>
+          <a href="#">Created by me</a>
+        </div>
+        <div class="nav-label">Projects</div>
+        <div class="nav">
+          <a href="#">N2N TMS</a>
+          <a class="active" href="#">PesanMana</a>
+          <a href="#">Tixcorner</a>
+          <a href="#">Internal Ops</a>
+        </div>
+      </aside>
+
+      <div class="main">
+        <div class="top">
+          <div class="top-tabs">
+            <span>Inbox</span>
+            <span>My to-do</span>
+            <span class="active">Workload</span>
+            <span>Boards</span>
+          </div>
+          <span class="badge">Mock only</span>
+        </div>
+
+        <div class="content">
+          <h1>Workload · Creative Team</h1>
+          <p class="sub">
+            Tampilan ala Wrike: baris = orang, sumbu X = tanggal.
+            <b>Tidak pakai nama kolom kanban</b> (To Do / Review / dll bebas per board).
+            Yang dipakai: assignee + due date (+ optional start).
+          </p>
+
+          <div class="note">
+            Data palsu untuk diskusi. Real data nanti: ambil semua card yang punya
+            <code>dueDate</code> + member assignee lintas project. Kolom list diabaikan.
+            Kalau card belum punya due date → masuk “Backlog box”, bukan timeline.
+          </div>
+
+          <div class="toolbar">
+            <select><option>All active tasks</option><option>Overdue only</option></select>
+            <select><option>All users</option><option>Designers</option><option>Engineering</option></select>
+            <button type="button">Expand all</button>
+            <button type="button">Days ▾</button>
+          </div>
+
+          <div class="panel">
+            <div class="grid">
+              <div class="head-left">People</div>
+              <div class="head-right">
+                <div class="weeks">
+                  <div>Sep 22 – 28</div>
+                  <div>Sep 29 – Oct 5</div>
+                  <div>Oct 6 – 12</div>
+                  <div>Oct 13 – 19</div>
+                  <div>Oct 20 – 26</div>
+                </div>
+                <div class="days" id="days"></div>
+              </div>
+
+              <!-- Don -->
+              <div class="row-left"><div class="person"><span class="av">DC</span>Don Conti</div></div>
+              <div class="row-right">
+                <div class="load" data-load="2,2,3,4,3,0,0,5,6,4,3,2,0,0,2,2,2,1,1,0,0,3,8,11,4,2,0,0,1,1,1,1,1,0,0"></div>
+                <div class="bars">
+                  <div class="bar c1" style="left:5.7%;width:17%">Landing Page Design</div>
+                  <div class="bar c2" style="left:28%;width:14%">Campaign assets</div>
+                  <div class="bar c4" style="left:54%;width:20%">Packaging refresh</div>
+                </div>
+              </div>
+
+              <!-- Elliot -->
+              <div class="row-left"><div class="person"><span class="av" style="background:#175cd3">EW</span>Elliot Whiteaker</div></div>
+              <div class="row-right">
+                <div class="load" data-load="4,4,5,5,4,0,0,3,3,3,3,3,0,0,6,7,8,6,4,0,0,2,2,2,2,2,0,0,1,1,1,1,1,0,0"></div>
+                <div class="bars">
+                  <div class="bar c3" style="left:2%;width:22%">EDI mapping QA</div>
+                  <div class="bar c5" style="left:34%;width:18%">Seat map mobile</div>
+                  <div class="bar c1" style="left:62%;width:16%">Invoice PDF v2</div>
+                </div>
+              </div>
+
+              <!-- Jack -->
+              <div class="row-left"><div class="person"><span class="av" style="background:#f79009">JG</span>Jack Graffik</div></div>
+              <div class="row-right">
+                <div class="load" data-load="1,1,1,2,2,0,0,2,2,8,12,9,0,0,4,4,4,4,4,0,0,3,3,3,3,3,0,0,2,2,2,2,2,0,0"></div>
+                <div class="bars">
+                  <div class="bar c2" style="left:20%;width:12%">POS go-live kit</div>
+                  <div class="bar c4" style="left:40%;width:25%">Graphic Design Work</div>
+                  <div class="bar c3" style="left:72%;width:14%">Brand guidelines</div>
+                </div>
+              </div>
+
+              <!-- Jerrica -->
+              <div class="row-left"><div class="person"><span class="av" style="background:#7a5af8">JM</span>Jerrica More</div></div>
+              <div class="row-right">
+                <div class="load" data-load="3,3,3,3,3,0,0,1,1,1,1,1,0,0,5,5,21,11,4,0,0,2,2,2,2,2,0,0,3,3,3,3,3,0,0"></div>
+                <div class="bars">
+                  <div class="bar c5" style="left:8%;width:15%">Social templates</div>
+                  <div class="bar c1" style="left:45%;width:22%">Launch video cut</div>
+                  <div class="bar c2" style="left:78%;width:12%">Press kit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="legend">
+            <span><b>Cara baca:</b> angka di atas bar = “beban” harian (mock jam). Merah = overload.</span>
+            <span>Warna bar = project (bukan status kolom).</span>
+            <span>Card tanpa due date tidak muncul di sini.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const days = document.getElementById('days');
+      const labels = 'MTWTFSS'.repeat(5).split('');
+      days.innerHTML = labels.map((d) => '<span>' + d + '</span>').join('');
+      document.querySelectorAll('.load').forEach((el) => {
+        const vals = el.dataset.load.split(',');
+        el.innerHTML = vals
+          .map((v) => {
+            const n = Number(v);
+            const cls = n >= 8 ? ' hot' : '';
+            return '<i class="' + cls.trim() + '">' + (n || '') + '</i>';
+          })
+          .join('');
+      });
+    </script>
+  </body>
+</html>

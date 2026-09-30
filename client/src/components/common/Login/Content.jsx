@@ -5,12 +5,12 @@
 
 import isEmail from 'validator/lib/isEmail';
 import React, { useCallback, useEffect, useMemo } from 'react';
-import classNames from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
-import { useTranslation, Trans } from 'react-i18next';
-import { Form, Grid, Header, Message } from 'semantic-ui-react';
+import { useTranslation } from 'react-i18next';
+import { Button, Form, Message } from 'semantic-ui-react';
 import { useDidUpdate, usePrevious, useToggle } from '../../../lib/hooks';
 import { Input } from '../../../lib/custom-ui';
+import { redirectToOidcProvider } from '../../../utils/oidc';
 
 import selectors from '../../../selectors';
 import entryActions from '../../../entry-actions';
@@ -20,7 +20,7 @@ import AccessTokenSteps from '../../../constants/AccessTokenSteps';
 import TermsModal from './TermsModal';
 import TotpChallengeModal from './TotpChallengeModal';
 
-import logo from '../../../assets/images/logo.png';
+import logoHeader from '../../../assets/images/logo-header.png';
 
 import styles from './Content.module.scss';
 
@@ -64,6 +64,32 @@ const createMessage = (error) => {
       return {
         type: 'error',
         content: 'common.activeUsersLimitReached',
+      };
+    case 'User not registered':
+      return {
+        type: 'error',
+        content: 'common.userNotRegistered',
+      };
+    case 'Email domain not allowed':
+      return {
+        type: 'error',
+        content: 'common.emailDomainNotAllowed',
+      };
+    case 'Email not verified':
+      return {
+        type: 'error',
+        content: 'common.emailNotVerified',
+      };
+    case 'Invalid OIDC code':
+    case 'Invalid OIDC state':
+      return {
+        type: 'error',
+        content: 'common.ssoLoginFailed',
+      };
+    case 'OIDC login cancelled':
+      return {
+        type: 'warning',
+        content: 'common.ssoLoginCancelled',
       };
     case 'Failed to fetch':
       return {
@@ -144,6 +170,10 @@ const Content = React.memo(() => {
     dispatch(entryActions.authenticate(cleanData));
   }, [dispatch, data, emailOrUsernameFieldRef, passwordFieldRef]);
 
+  const handleSsoClick = useCallback(() => {
+    redirectToOidcProvider(bootstrap.oidc.authorizationUrl);
+  }, [bootstrap.oidc]);
+
   const handleMessageDismiss = useCallback(() => {
     dispatch(entryActions.clearAuthenticateError());
   }, [dispatch]);
@@ -178,96 +208,87 @@ const Content = React.memo(() => {
   }, [focusPasswordFieldState]);
 
   return (
-    <div className={classNames(styles.wrapper, styles.fullHeight)}>
-      <Grid verticalAlign="middle" className={styles.grid}>
-        <Grid.Column computer={6} tablet={16} mobile={16} className={styles.gridItem}>
-          <div className={styles.login}>
-            <div className={styles.form}>
-              <div className={styles.logoWrapper}>
-                <img src={logo} alt="" className={styles.logo} />
-              </div>
-              <Header
-                as="h1"
-                textAlign="center"
-                content={bootstrap.instanceName || 'bigtech Task'}
-                className={styles.formTitle}
+    <div className={styles.page}>
+      <div className={styles.bg} aria-hidden="true" />
+      <div className={styles.shell}>
+        <div className={styles.brandBar}>
+          <img src={logoHeader} alt="bigtech" className={styles.brandLogo} />
+        </div>
+
+        <div className={styles.card}>
+          <h1 className={styles.title}>{t('common.logIn', { context: 'title' })}</h1>
+
+          {message && (
+            <Message
+              {...{
+                [message.type]: true,
+              }}
+              visible
+              content={t(message.content)}
+              onDismiss={handleMessageDismiss}
+              className={styles.message}
+            />
+          )}
+
+          <Form className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.field}>
+              <label className={styles.label} htmlFor="login-email">
+                {t('common.emailOrUsername')}
+              </label>
+              <Input
+                fluid
+                id="login-email"
+                ref={handleEmailOrUsernameFieldRef}
+                name="emailOrUsername"
+                value={data.emailOrUsername}
+                maxLength={256}
+                readOnly={isSubmitting}
+                className={styles.input}
+                onChange={handleFieldChange}
               />
-              <Header
-                as="h2"
-                textAlign="center"
-                content={t('common.logIn', {
-                  context: 'title',
-                })}
-                className={styles.formSubtitle}
+            </div>
+            <div className={styles.field}>
+              <label className={styles.label} htmlFor="login-password">
+                {t('common.password')}
+              </label>
+              <Input.Password
+                fluid
+                id="login-password"
+                ref={handlePasswordFieldRef}
+                name="password"
+                value={data.password}
+                maxLength={256}
+                readOnly={isSubmitting}
+                className={styles.input}
+                onChange={handleFieldChange}
               />
-              {message && (
-                <Message
-                  {...{
-                    [message.type]: true,
-                  }}
-                  visible
-                  content={t(message.content)}
-                  onDismiss={handleMessageDismiss}
-                />
-              )}
-              <Form size="large" onSubmit={handleSubmit}>
-                <div className={styles.inputWrapper}>
-                  <div className={styles.inputLabel}>{t('common.emailOrUsername')}</div>
-                  <Input
-                    fluid
-                    ref={handleEmailOrUsernameFieldRef}
-                    name="emailOrUsername"
-                    value={data.emailOrUsername}
-                    maxLength={256}
-                    readOnly={isSubmitting}
-                    className={styles.input}
-                    onChange={handleFieldChange}
-                  />
-                </div>
-                <div className={styles.inputWrapper}>
-                  <div className={styles.inputLabel}>{t('common.password')}</div>
-                  <Input.Password
-                    fluid
-                    ref={handlePasswordFieldRef}
-                    name="password"
-                    value={data.password}
-                    maxLength={256}
-                    readOnly={isSubmitting}
-                    className={styles.input}
-                    onChange={handleFieldChange}
-                  />
-                </div>
-                <Form.Button
-                  fluid
-                  primary
-                  icon="right arrow"
-                  labelPosition="right"
-                  content={t('action.logIn')}
-                  loading={isSubmitting}
-                  disabled={isSubmitting}
-                />
-              </Form>
             </div>
-            <div className={styles.poweredBy}>
-              <p className={styles.poweredByText}>
-                <Trans i18nKey="common.poweredByPlanka">
-                  {'by '}
-                  <a href="https://bigtech.id" target="_blank" rel="noreferrer">
-                    bigtech
-                  </a>
-                </Trans>
-              </p>
-            </div>
-          </div>
-        </Grid.Column>
-        <Grid.Column
-          computer={10}
-          only="computer"
-          className={classNames(styles.gridItem, styles.cover)}
-        >
-          <div className={styles.coverOverlay} />
-        </Grid.Column>
-      </Grid>
+            <Button
+              fluid
+              type="submit"
+              content={t('action.logIn')}
+              loading={isSubmitting}
+              disabled={isSubmitting}
+              className={styles.submit}
+            />
+          </Form>
+
+          {bootstrap.oidc && (
+            <>
+              <div className={styles.divider}>{t('common.or')}</div>
+              <Button
+                fluid
+                type="button"
+                content={bootstrap.oidc.buttonText || t('action.logInWithSso')}
+                disabled={isSubmitting}
+                className={styles.sso}
+                onClick={handleSsoClick}
+              />
+            </>
+          )}
+        </div>
+      </div>
+
       {step === AccessTokenSteps.ACCEPT_TERMS && <TermsModal />}
       {step === AccessTokenSteps.VERIFY_TOTP && <TotpChallengeModal />}
     </div>

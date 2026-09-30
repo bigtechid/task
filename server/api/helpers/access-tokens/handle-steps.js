@@ -47,7 +47,7 @@ module.exports = {
 
     if (!internalConfig.isInitialized) {
       if (inputs.user.role === User.Roles.ADMIN) {
-        if (inputs.user.termsSignature) {
+        if (inputs.user.termsSignature || sails.config.custom.termsDisabled) {
           await InternalConfig.qm.updateOneMain({
             isInitialized: true,
           });
@@ -57,7 +57,10 @@ module.exports = {
       }
     }
 
-    if (!sails.hooks.terms.isSignatureValid(inputs.user.termsSignature)) {
+    if (
+      !sails.config.custom.termsDisabled &&
+      !sails.hooks.terms.isSignatureValid(inputs.user.termsSignature)
+    ) {
       const { token: pendingToken, payload: pendingTokenPayload } =
         sails.helpers.utils.createJwtToken(
           AccessTokenSteps.ACCEPT_TERMS,
