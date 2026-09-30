@@ -70,7 +70,7 @@ const PreferencesPane = React.memo(() => {
     [t],
   );
 
-  const autoLogoutValue = user.autoLogoutMode || AutoLogoutModes.MINUTES_30;
+  const autoLogoutValue = user.autoLogoutMode || AutoLogoutModes.NEVER;
 
   return (
     <Tab.Pane attached={false} className={styles.wrapper}>

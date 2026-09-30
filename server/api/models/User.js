@@ -433,7 +433,7 @@ module.exports = {
     autoLogoutMode: {
       type: 'string',
       isIn: Object.values(AutoLogoutModes),
-      defaultsTo: AutoLogoutModes.MINUTES_30,
+      defaultsTo: AutoLogoutModes.NEVER,
       columnName: 'auto_logout_mode',
     },
     totpSecret: {
